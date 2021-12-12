@@ -1,0 +1,28 @@
+CREATE TABLE user (
+  id int NOT NULL,
+  login varchar(255) DEFAULT NULL,
+  surname varchar(30) NULL,
+  name varchar(30) NULL,
+  password varchar(255) NULL,
+  email varchar(100) NULL
+)
+
+ALTER TABLE user
+  ADD PRIMARY KEY (id),
+  ADD UNIQUE KEY login (login);
+
+ALTER TABLE user
+  MODIFY id int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=186;
+  COMMIT;
+
+INSERT INTO user (id, login, name, surname, password, email) VALUES
+(1, 'Ivan1999', 'Ivan', 'Ivanov', 'de0fa1c0977bef08b10a8fd8d8f86200', 'Ivan@gmail.com'),
+(2, 'Petya1', 'Petya', 'Petrov', '09d4a244b67248cda3adfea828abb263', 'Petr@gmail.com'),
+(3, 'Bunker74', 'Artem', 'Kuznetsov', '3f6703e092feeacf071f3b4a40db51a3', 'bunker_074@mail.ru'),
+(4, 'CrankyShine', 'Vlad', 'Vdovin', 'd0b8297638452d6082fc4974acf38704', 'vladick@gmail.com'),
+(5, 'Ozidyze', 'Dmitry', 'Belousov', 'beb9fd75f1bed259e9b4d2fcb1b6e6d1', 'dimasik@mail.ru'),
+(6, 'Alisa', 'Ann', 'Gridina', '7f6f09408868aaa7cb50d02a96346609', 'Alisa@gmail.com'),
+(7, 'Lizaaa', 'Elizabeth', 'II', '09f7805017cb3500a478d0b771be534b', 'Lizzka@mail.ru'),
+(8, 'Alex11', 'Alexey', 'Vlasov', '66080b6049da4ca37a0581385604c335', 'Alex11@yahoo.com'),
+(9, 'Leha2001', 'Alexandr', 'Pushkin', '93d645849001faf09bf073bc75a5b28b', 'alesha@yahoo.com'),
+(10, 'Serega228', 'Sergey', 'Susanin', 'fd93d5180a9cc895aeff1d1d8b070f9c', 'gray@yahoo.com');
